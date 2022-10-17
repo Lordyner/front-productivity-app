@@ -1,24 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import SignUp from './Components/Authentication/SignUp';
+import Home from './Components/Layout/Home';
+import { Route, Routes } from 'react-router-dom';
+import Layout from './Components/Layout/Layout';
+import SignIn from './Components/Authentication/SignIn';
+import Dashboard from './Components/Dashboard';
+import RequireAuth from './Components/RequireAuth';
+import PersistLogin from './Components/PersistLogin';
+import NewOpportunity from './Components/Opportunity/OpportunityCreate';
+import OpportunityDetails from './Components/Opportunity/OpportunityDetails';
+import OpportunityUpdate from './Components/Opportunity/OpportunityUpdate';
+
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        {/* Routes publics */}
+        <Route index element={<Home />} />
+        <Route path="signUp" element={<SignUp />} />
+        <Route path="signIn" element={<SignIn />} />
+        {/* Routes privées */}
+        <Route element={<PersistLogin />}>
+          <Route element={<RequireAuth />}>
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/newOpportunity" element={<NewOpportunity />} />
+            <Route path="/opportunity/details" element={<OpportunityDetails />} />
+            <Route path="/opportunity/update" element={<OpportunityUpdate />} />
+          </Route>
+        </Route>
+      </Route>
+    </Routes>
+
   );
 }
 

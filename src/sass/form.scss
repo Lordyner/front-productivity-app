@@ -1,0 +1,144 @@
+// TODO move into style components
+.opportunity {
+    border: solid 1px #ddd;
+    padding: 1rem;
+    margin: 1rem 0;
+    cursor: pointer;
+    display: flex;
+
+    &:hover {
+        border-color: rgba(57, 21, 157, 0.549);
+    }
+}
+
+
+
+
+.instructions {
+    font-size: 0.75rem;
+    border-radius: 0.5rem;
+    background: rgba(0, 0, 0, 0.508);
+    color: #fff;
+    padding: 0.25rem;
+    bottom: -10px;
+
+    &>svg {
+        margin-right: 0.25rem;
+    }
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    max-width: 25rem;
+    width: 100%;
+    padding: 20px;
+    margin-top: 10px 10px 10px 10 px;
+    margin: 10px 0;
+
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 4.6px;
+}
+
+input {
+    border: 2px solid var(--lightgrey);
+    border-radius: 4px;
+    padding: 15px 10px;
+    background-color: var(--lightgrey);
+    font-size: clamp(10px, 1.30rem, 30px);
+
+    &:focus,
+    &:focus-visible {
+        border: 2px solid var(--purple);
+        outline: none;
+    }
+
+    &::placeholder {
+        color: rgba(146, 131, 131, 0.279);
+        font-weight: 100;
+
+    }
+
+    .validation-error {
+        border: 1px solid rgba(253, 0, 0, 0.549);
+    }
+
+}
+
+textarea {
+
+    border: 2px solid var(--lightgrey);
+    border-radius: 4px;
+    padding: 15px 10px;
+    background-color: var(--lightgrey);
+    font-size: clamp(10px, 1.30rem, 30px);
+    resize: none;
+
+    &::placeholder {
+        color: rgba(146, 131, 131, 0.279);
+        font-weight: 100;
+    }
+
+    &:focus,
+    &:focus-visible {
+        border: 2px solid var(--purple);
+        outline: none;
+    }
+
+
+    &::placeholder {
+        color: rgba(146, 131, 131, 0.279);
+        font-weight: 100;
+    }
+}
+
+button {
+    &[type="submit"] {
+
+        width: 100%;
+        padding: 15px 10px;
+
+        background-color: var(--purple);
+        border-radius: 4px;
+        font-size: clamp(10px, 1.30rem, 30px);
+        color: white;
+        border: none;
+        text-align: center;
+    }
+}
+
+label {
+    font-size: 1.3rem;
+}
+
+input[type="checkbox"] {
+    width: 2.25rem;
+    height: 2.25rem;
+
+    &:checked {
+        background-color: red;
+    }
+
+    &::after {
+        background-color: red;
+    }
+
+    &::before {
+        background-color: red;
+    }
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    /* gap: 1rem; */
+    justify-content: space-between;
+}
+
+#date-selector {
+    background-color: white;
+    border-radius: 4px;
+}

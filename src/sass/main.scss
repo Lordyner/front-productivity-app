@@ -1,0 +1,133 @@
+@import url('./reset.scss');
+@import url('./containers-size.scss');
+@import url('./variables.scss');
+@import url('./navbar.scss');
+@import url('./form.scss');
+@import url('./font.scss');
+@import url('./utils.scss');
+@import url('../../node_modules/normalize-scss/sass/_normalize.scss');
+
+
+
+body {
+    background-color: var(--lightgrey);
+}
+
+
+.flex-form-container {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.error-message {
+    color: #f02849;
+}
+
+
+
+footer {
+    box-shadow: var(--purple) 0px 2px 10px;
+    margin-top: 1rem;
+    position: fixed;
+    display: flex;
+    bottom: 0;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.opportunity-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-height: 5px;
+}
+
+.opportunity-item {
+    display: flex;
+    justify-content: space-between;
+
+    min-height: 9rem;
+    padding: 1rem;
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 4.6px;
+
+    a {
+        text-decoration: none;
+    }
+
+    svg {
+        font-size: 1.85rem;
+
+    }
+
+    a.icon {
+        height: min-content;
+    }
+}
+
+.opportunity-icons-container {
+    display: flex;
+    gap: 1rem;
+    height: min-content;
+}
+
+.opportunity-text-container {
+    display: flex;
+    flex-grow: 2;
+    align-items: center;
+
+    p {
+        height: fit-content;
+    }
+
+}
+
+.opportunity-card-link {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.opportunity-top-bar-container {
+    display: flex;
+    height: min-content;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.flex-container-date {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+
+}
+
+a {
+    color: #000000;
+}
+
+@media screen and (min-width: 768px) {}
+
+@media screen and (min-width: 1024px) {}
+
+@media screen and (min-width: 1280px) {
+    .opportunity-container {
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        gap: 3rem;
+    }
+
+    .opportunity-item {
+        width: 33%;
+        min-height: 300px;
+    }
+
+}
+
+@media screen and (min-width: 1536px) {}

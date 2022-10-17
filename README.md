@@ -1,4 +1,4 @@
-# front-productivity-app
+# Goals tracking & Productivity boosting app
 
 This is a side-project that's born from a desire to learn react and also to have an app to help me track progress on my goals.
 

@@ -1,4 +1,4 @@
-# Goals tracking & Productivity boosting app
+# Goals tracking
 
 This is a side-project that's born from a desire to learn react and also to have an app to help me track progress on my goals.
 
